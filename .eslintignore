@@ -1,0 +1,4 @@
+src/app/ui/GlobalCSS.svelte
+**/node_modules/**
+.eslintrc
+dist/*
