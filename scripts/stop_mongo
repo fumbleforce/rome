@@ -1,0 +1,5 @@
+#!/bin/bash
+:
+mongo --host $1 --port $2 admin --eval 'db.shutdownServer()' > /dev/null 2>&1
+
+echo "✓ Mongo is stopped"

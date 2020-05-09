@@ -1,6 +1,5 @@
 <script>
-	import Login from "./Login.svelte";
-	import { session } from "../stores";
+	import Login from "./login/Login.svelte";
 </script>
 
 
@@ -39,16 +38,12 @@
 		<img alt='Cicero' src='cicero.png'>
 	</figure>
 
-	<h1>Rome Simulator 20</h1>
+	<h1>Dignitas</h1>
 	<p>
 		This is a game about politics, intreague, wealth building and power.
 	</p>
 
 	<p>
-		{#if $session.user}
-		<h2>Welcome {$session.user.email}</h2>
-		{:else}
 		<Login />
-		{/if}
 	</p>
 </div>

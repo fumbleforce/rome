@@ -63,6 +63,7 @@ export default {
   ],
 
   watch: {
-    clearScreen: false
+    clearScreen: false,
+    include: ["src/app/**", "src/static/**"]
   }
 };

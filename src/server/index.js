@@ -1,9 +1,11 @@
-import socketServer from "./socket_server.js";
-import httpServer from "./http_server.js";
+import "./game_methods";
+import "./user_methods";
 
-const { NODE_ENV = "development" } = process.env;
+import Hidden from "hidden_server";
+import { User } from "./collections";
 
-const dev = NODE_ENV === "development";
-
-const server = httpServer(dev);
-socketServer(server);
+Hidden.startup(() => {
+  User.watch().on("change", (...args) => {
+    console.log("user change", args);
+  });
+});

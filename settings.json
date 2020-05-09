@@ -1,0 +1,4 @@
+{
+  "MONGO_URL": "mongodb://localhost:4001/dignitas?readPreference=primaryPreferred",
+  "MONGO_DB": "dignitas"
+}

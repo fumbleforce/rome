@@ -1,0 +1,178 @@
+2020-05-09T11:47:07.981+0200 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-05-09T11:47:07.983+0200 D1 NETWORK  [main] fd limit hard:524288 soft:524288 max conn: 419430
+2020-05-09T11:47:07.983+0200 I  CONTROL  [initandlisten] MongoDB starting : pid=23713 port=4001 dbpath=/home/jorgen/repo/rome/scripts/../db 64-bit host=kdepc
+2020-05-09T11:47:07.983+0200 I  CONTROL  [initandlisten] db version v4.2.0
+2020-05-09T11:47:07.983+0200 I  CONTROL  [initandlisten] git version: a4b751dcf51dd249c5865812b390cfd1c0129c30
+2020-05-09T11:47:07.983+0200 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1g  21 Apr 2020
+2020-05-09T11:47:07.983+0200 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-05-09T11:47:07.983+0200 I  CONTROL  [initandlisten] modules: none
+2020-05-09T11:47:07.983+0200 I  CONTROL  [initandlisten] build environment:
+2020-05-09T11:47:07.983+0200 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-05-09T11:47:07.983+0200 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-05-09T11:47:07.983+0200 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-05-09T11:47:07.983+0200 I  CONTROL  [initandlisten] options: { net: { bindIp: "localhost", port: 4001 }, processManagement: { fork: true }, replication: { oplogSizeMB: 8 }, security: { authorization: "disabled" }, storage: { dbPath: "/home/jorgen/repo/rome/scripts/../db" }, systemLog: { destination: "file", path: "/home/jorgen/repo/rome/scripts/../db/db.log", verbosity: 1 } }
+2020-05-09T11:47:07.983+0200 D1 NETWORK  [initandlisten] fd limit hard:524288 soft:524288 max conn: 419430
+2020-05-09T11:47:07.984+0200 I  STORAGE  [initandlisten] Detected data files in /home/jorgen/repo/rome/scripts/../db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-05-09T11:47:07.984+0200 I  STORAGE  [initandlisten] 
+2020-05-09T11:47:07.984+0200 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-05-09T11:47:07.984+0200 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-05-09T11:47:07.984+0200 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=15520M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-05-09T11:47:08.494+0200 I  STORAGE  [initandlisten] WiredTiger message [1589017628:494382][23713:0x7f1538245f40], txn-recover: Recovering log 4 through 5
+2020-05-09T11:47:08.529+0200 I  STORAGE  [initandlisten] WiredTiger message [1589017628:529231][23713:0x7f1538245f40], txn-recover: Recovering log 5 through 5
+2020-05-09T11:47:08.574+0200 I  STORAGE  [initandlisten] WiredTiger message [1589017628:574269][23713:0x7f1538245f40], txn-recover: Main recovery loop: starting at 4/2048 to 5/256
+2020-05-09T11:47:08.634+0200 I  STORAGE  [initandlisten] WiredTiger message [1589017628:634183][23713:0x7f1538245f40], txn-recover: Recovering log 4 through 5
+2020-05-09T11:47:08.718+0200 I  STORAGE  [initandlisten] WiredTiger message [1589017628:718168][23713:0x7f1538245f40], txn-recover: Recovering log 5 through 5
+2020-05-09T11:47:08.744+0200 I  STORAGE  [initandlisten] WiredTiger message [1589017628:744845][23713:0x7f1538245f40], txn-recover: Set global recovery timestamp: (0,0)
+2020-05-09T11:47:08.779+0200 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-05-09T11:47:08.779+0200 D1 COMMAND  [WTCheckpointThread] BackgroundJob starting: WTCheckpointThread
+2020-05-09T11:47:08.779+0200 D1 STORAGE  [WTCheckpointThread] starting WTCheckpointThread thread
+2020-05-09T11:47:08.779+0200 D1 COMMAND  [WTIdleSessionSweeper] BackgroundJob starting: WTIdleSessionSweeper
+2020-05-09T11:47:08.779+0200 D1 STORAGE  [WTIdleSessionSweeper] starting WTIdleSessionSweeper thread
+2020-05-09T11:47:08.779+0200 D1 COMMAND  [WTJournalFlusher] BackgroundJob starting: WTJournalFlusher
+2020-05-09T11:47:08.779+0200 D1 STORAGE  [WTJournalFlusher] starting WTJournalFlusher thread
+2020-05-09T11:47:08.780+0200 D1 STORAGE  [initandlisten] Changing table logging settings. Uri: table:_mdb_catalog Enable? 1
+2020-05-09T11:47:08.782+0200 D1 STORAGE  [initandlisten] Registering collection local.replset.election with UUID 5e2b4146-3254-4685-8c37-b485a9d4197f
+2020-05-09T11:47:08.782+0200 D1 STORAGE  [initandlisten] Changing table logging settings. Uri: table:collection-4-6367915259605227634 Enable? 1
+2020-05-09T11:47:08.782+0200 D1 STORAGE  [initandlisten] Registering collection local.replset.minvalid with UUID 2d259f63-f1ba-4ad3-acb3-c5e5d9e654ee
+2020-05-09T11:47:08.783+0200 D1 STORAGE  [initandlisten] Registering collection local.replset.oplogTruncateAfterPoint with UUID 5ecfbe65-59a7-4a40-a967-9a4b822f12e4
+2020-05-09T11:47:08.784+0200 D1 STORAGE  [initandlisten] Registering collection local.startup_log with UUID 9e5e753f-a47b-4243-9e31-580fcc8f44c5
+2020-05-09T11:47:08.784+0200 D1 STORAGE  [initandlisten] Registering collection local.system.rollback.id with UUID 5e808a9c-85bb-4e7f-b81a-96eb54103b16
+2020-05-09T11:47:08.784+0200 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-05-09T11:47:08.795+0200 D1 STORAGE  [initandlisten] flushing directory /home/jorgen/repo/rome/scripts/../db
+2020-05-09T11:47:08.797+0200 I  CONTROL  [initandlisten] 
+2020-05-09T11:47:08.797+0200 I  CONTROL  [initandlisten] ** WARNING: soft rlimits too low. rlimits set to 128183 processes, 524288 files. Number of processes should be at least 262144 : 0.5 times number of files.
+2020-05-09T11:47:08.797+0200 D1 -        [initandlisten] reloading view catalog for database admin
+2020-05-09T11:47:08.797+0200 I  STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 6a59ac6c-404b-4bb5-98b0-804242322dcc and options: { uuid: UUID("6a59ac6c-404b-4bb5-98b0-804242322dcc") }
+2020-05-09T11:47:08.797+0200 D1 STORAGE  [initandlisten] stored meta data for admin.system.version @ RecordId(7)
+2020-05-09T11:47:08.801+0200 D1 STORAGE  [initandlisten] admin.system.version: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.801+0200 D1 STORAGE  [initandlisten] Registering collection admin.system.version with UUID 6a59ac6c-404b-4bb5-98b0-804242322dcc
+2020-05-09T11:47:08.801+0200 D1 STORAGE  [initandlisten] create uri: table:index-1-7829256647724557299 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=8),log=(enabled=true)
+2020-05-09T11:47:08.803+0200 D1 STORAGE  [initandlisten] admin.system.version: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.803+0200 I  INDEX    [initandlisten] index build: done building index _id_ on ns admin.system.version
+2020-05-09T11:47:08.803+0200 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-05-09T11:47:08.803+0200 I  COMMAND  [initandlisten] setting featureCompatibilityVersion to 4.2
+2020-05-09T11:47:08.811+0200 D1 STORAGE  [initandlisten] Changing table logging settings. Uri: table:index-5-6367915259605227634 Enable? 1
+2020-05-09T11:47:08.811+0200 D1 STORAGE  [initandlisten] local.replset.minvalid: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.811+0200 D1 STORAGE  [initandlisten] local.replset.election: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.812+0200 D1 STORAGE  [initandlisten] local.system.rollback.id: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.812+0200 D1 STORAGE  [initandlisten] local.replset.oplogTruncateAfterPoint: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.813+0200 D1 STORAGE  [initandlisten] local.startup_log: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.813+0200 D1 -        [initandlisten] reloading view catalog for database local
+2020-05-09T11:47:08.813+0200 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-05-09T11:47:08.813+0200 D1 STORAGE  [initandlisten]     Recovering database: admin
+2020-05-09T11:47:08.813+0200 D1 STORAGE  [initandlisten]     Recovering database: local
+2020-05-09T11:47:08.813+0200 D1 STORAGE  [initandlisten] done repairDatabases
+2020-05-09T11:47:08.813+0200 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-05-09T11:47:08.813+0200 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-05-09T11:47:08.813+0200 I  COMMAND  [initandlisten] command admin.system.roles command: find { find: "system.roles", $db: "admin" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:107 locks:{ ReplicationStateTransition: { acquireCount: { w: 1 } }, Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 2 } }, Mutex: { acquireCount: { r: 1 } } } storage:{} protocol:op_msg 0ms
+2020-05-09T11:47:08.813+0200 D1 ACCESS   [initandlisten] There were no users to pin, not starting tracker thread
+2020-05-09T11:47:08.813+0200 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-05-09T11:47:08.813+0200 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/jorgen/repo/rome/scripts/../db/diagnostic.data'
+2020-05-09T11:47:08.813+0200 D1 EXECUTOR [FreeMonHTTP-0] starting thread in pool FreeMonHTTP
+2020-05-09T11:47:08.814+0200 D1 COMMAND  [TTLMonitor] BackgroundJob starting: TTLMonitor
+2020-05-09T11:47:08.814+0200 D1 COMMAND  [PeriodicTaskRunner] BackgroundJob starting: PeriodicTaskRunner
+2020-05-09T11:47:08.814+0200 D1 COMMAND  [ClientCursorMonitor] BackgroundJob starting: ClientCursorMonitor
+2020-05-09T11:47:08.814+0200 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2020-05-09T11:47:08.814+0200 D1 -        [LogicalSessionCacheRefresh] User Assertion: NamespaceNotFound: ns does not exist: config.system.sessions src/mongo/db/commands/list_indexes.cpp 155
+2020-05-09T11:47:08.814+0200 D1 -        [LogicalSessionCacheReap] User Assertion: NamespaceNotFound: ns does not exist: config.system.sessions src/mongo/db/commands/list_indexes.cpp 155
+2020-05-09T11:47:08.814+0200 I  NETWORK  [initandlisten] Listening on /tmp/mongodb-4001.sock
+2020-05-09T11:47:08.814+0200 I  NETWORK  [initandlisten] Listening on 127.0.0.1
+2020-05-09T11:47:08.814+0200 I  NETWORK  [initandlisten] waiting for connections on port 4001
+2020-05-09T11:47:08.814+0200 D1 COMMAND  [LogicalSessionCacheRefresh] assertion while executing command 'listIndexes' on database 'config' with arguments '{ listIndexes: "system.sessions", cursor: {}, $db: "config" }': NamespaceNotFound: ns does not exist: config.system.sessions
+2020-05-09T11:47:08.814+0200 D1 COMMAND  [LogicalSessionCacheReap] assertion while executing command 'listIndexes' on database 'config' with arguments '{ listIndexes: "system.sessions", cursor: {}, $db: "config" }': NamespaceNotFound: ns does not exist: config.system.sessions
+2020-05-09T11:47:08.814+0200 I  COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 ok:0 errMsg:"ns does not exist: config.system.sessions" errName:NamespaceNotFound errCode:26 reslen:134 locks:{ ReplicationStateTransition: { acquireCount: { w: 2 } }, Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 2 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2020-05-09T11:47:08.814+0200 I  COMMAND  [LogicalSessionCacheReap] command config.system.sessions command: listIndexes { listIndexes: "system.sessions", cursor: {}, $db: "config" } numYields:0 ok:0 errMsg:"ns does not exist: config.system.sessions" errName:NamespaceNotFound errCode:26 reslen:134 locks:{ ReplicationStateTransition: { acquireCount: { w: 2 } }, Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 2 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 0ms
+2020-05-09T11:47:08.814+0200 I  CONTROL  [LogicalSessionCacheReap] Sessions collection is not set up; waiting until next sessions reap interval: config.system.sessions does not exist
+2020-05-09T11:47:08.814+0200 D1 -        [LogicalSessionCacheRefresh] reloading view catalog for database config
+2020-05-09T11:47:08.814+0200 I  STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with provided UUID: 689b3332-89f4-4cff-831c-28aafb5ac435 and options: { uuid: UUID("689b3332-89f4-4cff-831c-28aafb5ac435") }
+2020-05-09T11:47:08.814+0200 D1 STORAGE  [LogicalSessionCacheRefresh] stored meta data for config.system.sessions @ RecordId(8)
+2020-05-09T11:47:08.818+0200 D1 STORAGE  [LogicalSessionCacheRefresh] config.system.sessions: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.818+0200 D1 STORAGE  [LogicalSessionCacheRefresh] Registering collection config.system.sessions with UUID 689b3332-89f4-4cff-831c-28aafb5ac435
+2020-05-09T11:47:08.818+0200 D1 STORAGE  [LogicalSessionCacheRefresh] create uri: table:index-3-7829256647724557299 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=8),log=(enabled=true)
+2020-05-09T11:47:08.821+0200 D1 STORAGE  [LogicalSessionCacheRefresh] config.system.sessions: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.821+0200 I  INDEX    [LogicalSessionCacheRefresh] index build: done building index _id_ on ns config.system.sessions
+2020-05-09T11:47:08.821+0200 D1 STORAGE  [LogicalSessionCacheRefresh] create uri: table:index-4-7829256647724557299 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=8),log=(enabled=true)
+2020-05-09T11:47:08.826+0200 D1 STORAGE  [LogicalSessionCacheRefresh] created temporary record store: internal-5-7829256647724557299
+2020-05-09T11:47:08.827+0200 D1 STORAGE  [LogicalSessionCacheRefresh] config.system.sessions: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.827+0200 I  INDEX    [LogicalSessionCacheRefresh] index build: starting on config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 } using method: Hybrid
+2020-05-09T11:47:08.827+0200 I  INDEX    [LogicalSessionCacheRefresh] build may temporarily use up to 500 megabytes of RAM
+2020-05-09T11:47:08.827+0200 I  INDEX    [LogicalSessionCacheRefresh] index build: collection scan done. scanned 0 total records in 0 seconds
+2020-05-09T11:47:08.827+0200 D1 INDEX    [LogicalSessionCacheRefresh] index build: inserting from external sorter into index: lsidTTLIndex
+2020-05-09T11:47:08.827+0200 I  INDEX    [LogicalSessionCacheRefresh] index build: inserted 0 keys from external sorter into index in 0 seconds
+2020-05-09T11:47:08.828+0200 D1 INDEX    [LogicalSessionCacheRefresh] index build: drain applied 0 side writes (inserted: 0, deleted: 0) for 'lsidTTLIndex' in 0 ms
+2020-05-09T11:47:08.828+0200 D1 INDEX    [LogicalSessionCacheRefresh] index build: drain applied 0 side writes (inserted: 0, deleted: 0) for 'lsidTTLIndex' in 0 ms
+2020-05-09T11:47:08.828+0200 D1 INDEX    [LogicalSessionCacheRefresh] index build: drain applied 0 side writes (inserted: 0, deleted: 0) for 'lsidTTLIndex' in 0 ms
+2020-05-09T11:47:08.828+0200 I  INDEX    [LogicalSessionCacheRefresh] index build: done building index lsidTTLIndex on ns config.system.sessions
+2020-05-09T11:47:08.828+0200 D1 STORAGE  [LogicalSessionCacheRefresh] config.system.sessions: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.829+0200 D1 STORAGE  [LogicalSessionCacheRefresh] WT drop of table:internal-5-7829256647724557299 res 0
+2020-05-09T11:47:08.829+0200 D1 STORAGE  [LogicalSessionCacheRefresh] ~WiredTigerRecordStore for temporary ident: internal-5-7829256647724557299
+2020-05-09T11:47:08.829+0200 I  COMMAND  [LogicalSessionCacheRefresh] command config.system.sessions command: createIndexes { createIndexes: "system.sessions", indexes: [ { key: { lastUse: 1 }, name: "lsidTTLIndex", expireAfterSeconds: 1800 } ], $db: "config" } numYields:0 reslen:114 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 2 } }, ReplicationStateTransition: { acquireCount: { w: 3 } }, Global: { acquireCount: { r: 1, w: 2 } }, Database: { acquireCount: { r: 1, w: 2, W: 1 } }, Collection: { acquireCount: { r: 4, w: 1, R: 1, W: 2 } }, Mutex: { acquireCount: { r: 3 } } } flowControl:{ acquireCount: 1 } storage:{} protocol:op_msg 14ms
+2020-05-09T11:47:08.858+0200 I  NETWORK  [listener] connection accepted from 127.0.0.1:59610 #1 (1 connection now open)
+2020-05-09T11:47:08.858+0200 I  NETWORK  [conn1] received client metadata from 127.0.0.1:59610 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.0" }, os: { type: "Linux", name: "ManjaroLinux", architecture: "x86_64", version: "20.0" } }
+2020-05-09T11:47:08.858+0200 I  COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1, hostInfo: "kdepc:27017", client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.0" }, os: { type: "Linux", name: "ManjaroLinux", architecture: "x86_64", version: "20.0" } }, $db: "admin" } numYields:0 reslen:257 locks:{} protocol:op_query 0ms
+2020-05-09T11:47:08.858+0200 I  COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: whatsmyuri { whatsmyuri: 1, $db: "admin" } numYields:0 reslen:63 locks:{} protocol:op_msg 0ms
+2020-05-09T11:47:08.860+0200 I  COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: buildInfo { buildinfo: 1.0, $db: "admin" } numYields:0 reslen:1335 locks:{} protocol:op_msg 0ms
+2020-05-09T11:47:08.861+0200 I  WRITE    [conn1] update admin.system.version appName: "MongoDB Shell" command: { q: { _id: "authSchema" }, u: { $set: { currentVersion: 5 } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:0 docsExamined:0 nMatched:0 nModified:0 upsert:1 keysInserted:1 numYields:0 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 1 } }, ReplicationStateTransition: { acquireCount: { w: 1 } }, Global: { acquireCount: { w: 1 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { w: 1 } }, Mutex: { acquireCount: { r: 2 } } } flowControl:{ acquireCount: 1 } storage:{} 0ms
+2020-05-09T11:47:08.861+0200 I  COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: update { update: "system.version", bypassDocumentValidation: false, ordered: true, $db: "admin" } numYields:0 reslen:114 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 2 } }, ReplicationStateTransition: { acquireCount: { w: 2 } }, Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { w: 1 } }, Mutex: { acquireCount: { r: 2 } } } flowControl:{ acquireCount: 1 } storage:{} protocol:op_msg 0ms
+2020-05-09T11:47:08.888+0200 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2020-05-09T11:47:08.888+0200 D1 STORAGE  [conn1] create collection admin.system.users {}
+2020-05-09T11:47:08.888+0200 I  STORAGE  [conn1] createCollection: admin.system.users with generated UUID: 76ad7c74-2697-40b6-b717-9042b8fbabe9 and options: {}
+2020-05-09T11:47:08.888+0200 D1 STORAGE  [conn1] stored meta data for admin.system.users @ RecordId(9)
+2020-05-09T11:47:08.898+0200 D1 STORAGE  [conn1] admin.system.users: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.898+0200 D1 STORAGE  [conn1] Registering collection admin.system.users with UUID 76ad7c74-2697-40b6-b717-9042b8fbabe9
+2020-05-09T11:47:08.898+0200 D1 STORAGE  [conn1] create uri: table:index-7-7829256647724557299 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=8),log=(enabled=true)
+2020-05-09T11:47:08.901+0200 D1 STORAGE  [conn1] admin.system.users: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.901+0200 I  INDEX    [conn1] index build: done building index _id_ on ns admin.system.users
+2020-05-09T11:47:08.901+0200 D1 STORAGE  [conn1] create uri: table:index-8-7829256647724557299 config: type=file,internal_page_max=16k,leaf_page_max=16k,checksum=on,prefix_compression=true,block_compressor=,,,,key_format=u,value_format=u,app_metadata=(formatVersion=12),log=(enabled=true)
+2020-05-09T11:47:08.903+0200 D1 STORAGE  [conn1] admin.system.users: clearing plan cache - collection info cache reset
+2020-05-09T11:47:08.903+0200 I  INDEX    [conn1] index build: done building index user_1_db_1 on ns admin.system.users
+2020-05-09T11:47:08.904+0200 I  COMMAND  [conn1] command admin.system.users appName: "MongoDB Shell" command: insert { insert: "system.users", bypassDocumentValidation: false, ordered: true, $db: "admin" } ninserted:1 keysInserted:2 numYields:0 reslen:45 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 3 } }, ReplicationStateTransition: { acquireCount: { w: 3 } }, Global: { acquireCount: { w: 3 } }, Database: { acquireCount: { W: 3 } }, Collection: { acquireCount: { r: 2, w: 2, W: 1 } }, Mutex: { acquireCount: { r: 5 } } } flowControl:{ acquireCount: 4 } storage:{} protocol:op_msg 15ms
+2020-05-09T11:47:08.904+0200 I  COMMAND  [conn1] command admin.system.version appName: "MongoDB Shell" command: createUser { createUser: "oplogger", pwd: "xxx", roles: [ { role: "read", db: "local" } ], digestPassword: true, writeConcern: { w: "majority", wtimeout: 600000.0 }, lsid: { id: UUID("9cdc7450-109d-44bb-889d-03b4000830bf") }, $db: "admin" } numYields:0 reslen:38 locks:{ ParallelBatchWriterMode: { acquireCount: { r: 7 } }, ReplicationStateTransition: { acquireCount: { w: 8 } }, Global: { acquireCount: { r: 4, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 3, w: 3, W: 1 } }, Mutex: { acquireCount: { r: 8 } } } flowControl:{ acquireCount: 4 } storage:{} protocol:op_msg 43ms
+2020-05-09T11:47:08.904+0200 I  COMMAND  [conn1] command admin.$cmd appName: "MongoDB Shell" command: endSessions { endSessions: [ { id: UUID("9cdc7450-109d-44bb-889d-03b4000830bf") } ], $db: "admin" } numYields:0 reslen:38 locks:{} protocol:op_msg 0ms
+2020-05-09T11:47:08.904+0200 I  NETWORK  [conn1] end connection 127.0.0.1:59610 (0 connections now open)
+2020-05-09T11:47:08.952+0200 I  NETWORK  [listener] connection accepted from 127.0.0.1:59612 #2 (1 connection now open)
+2020-05-09T11:47:08.952+0200 I  NETWORK  [conn2] received client metadata from 127.0.0.1:59612 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.0" }, os: { type: "Linux", name: "ManjaroLinux", architecture: "x86_64", version: "20.0" } }
+2020-05-09T11:47:08.952+0200 I  COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: isMaster { isMaster: 1, hostInfo: "kdepc:27017", client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.0" }, os: { type: "Linux", name: "ManjaroLinux", architecture: "x86_64", version: "20.0" } }, $db: "admin" } numYields:0 reslen:257 locks:{} protocol:op_query 0ms
+2020-05-09T11:47:08.952+0200 I  COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: whatsmyuri { whatsmyuri: 1, $db: "admin" } numYields:0 reslen:63 locks:{} protocol:op_msg 0ms
+2020-05-09T11:47:08.953+0200 I  COMMAND  [conn2] command admin.$cmd appName: "MongoDB Shell" command: buildInfo { buildinfo: 1.0, $db: "admin" } numYields:0 reslen:1335 locks:{} protocol:op_msg 0ms
+2020-05-09T11:47:08.954+0200 D1 -        [conn2] User Assertion: NotMaster: not primary so can't step down src/mongo/db/repl/replication_coordinator_impl.cpp 1977
+2020-05-09T11:47:08.954+0200 I  COMMAND  [conn2] terminating, shutdown command received { shutdown: 1.0, lsid: { id: UUID("431c1c06-e6a3-44a3-86cc-20f620c3bfe1") }, $db: "admin" }
+2020-05-09T11:47:08.954+0200 D1 QUERY    [conn2] received interrupt request for unknown op: 2
+2020-05-09T11:47:08.954+0200 I  NETWORK  [conn2] shutdown: going to close listening sockets...
+2020-05-09T11:47:08.954+0200 I  NETWORK  [conn2] removing socket file: /tmp/mongodb-4001.sock
+2020-05-09T11:47:08.954+0200 I  -        [conn2] Stopping further Flow Control ticket acquisitions.
+2020-05-09T11:47:08.954+0200 D1 QUERY    [conn2] received interrupt request for unknown op: 18
+2020-05-09T11:47:08.954+0200 I  CONTROL  [conn2] Shutting down free monitoring
+2020-05-09T11:47:08.954+0200 I  FTDC     [conn2] Shutting down full-time diagnostic data capture
+2020-05-09T11:47:08.954+0200 I  STORAGE  [conn2] Deregistering all the collections
+2020-05-09T11:47:08.954+0200 D1 STORAGE  [conn2] Deregistering collection local.replset.oplogTruncateAfterPoint with UUID 5ecfbe65-59a7-4a40-a967-9a4b822f12e4
+2020-05-09T11:47:08.954+0200 D1 STORAGE  [conn2] ~WiredTigerRecordStore for: local.replset.oplogTruncateAfterPoint
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] Deregistering collection local.replset.election with UUID 5e2b4146-3254-4685-8c37-b485a9d4197f
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] ~WiredTigerRecordStore for: local.replset.election
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] Deregistering collection admin.system.version with UUID 6a59ac6c-404b-4bb5-98b0-804242322dcc
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] ~WiredTigerRecordStore for: admin.system.version
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] Deregistering collection local.startup_log with UUID 9e5e753f-a47b-4243-9e31-580fcc8f44c5
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] ~WiredTigerRecordStore for: local.startup_log
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] Deregistering collection config.system.sessions with UUID 689b3332-89f4-4cff-831c-28aafb5ac435
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] ~WiredTigerRecordStore for: config.system.sessions
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] Deregistering collection admin.system.users with UUID 76ad7c74-2697-40b6-b717-9042b8fbabe9
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] ~WiredTigerRecordStore for: admin.system.users
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] Deregistering collection local.replset.minvalid with UUID 2d259f63-f1ba-4ad3-acb3-c5e5d9e654ee
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] ~WiredTigerRecordStore for: local.replset.minvalid
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] Deregistering collection local.system.rollback.id with UUID 5e808a9c-85bb-4e7f-b81a-96eb54103b16
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] ~WiredTigerRecordStore for: local.system.rollback.id
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [conn2] ~WiredTigerRecordStore for: _mdb_catalog
+2020-05-09T11:47:08.955+0200 I  STORAGE  [conn2] Timestamp monitor shutting down
+2020-05-09T11:47:08.955+0200 I  STORAGE  [conn2] WiredTigerKVEngine shutting down
+2020-05-09T11:47:08.955+0200 I  STORAGE  [conn2] Shutting down session sweeper thread
+2020-05-09T11:47:08.955+0200 D1 STORAGE  [WTIdleSessionSweeper] stopping WTIdleSessionSweeper thread
+2020-05-09T11:47:08.955+0200 I  STORAGE  [conn2] Finished shutting down session sweeper thread
+2020-05-09T11:47:08.955+0200 I  STORAGE  [conn2] Shutting down journal flusher thread
+2020-05-09T11:47:08.980+0200 D1 STORAGE  [WTJournalFlusher] stopping WTJournalFlusher thread
+2020-05-09T11:47:08.980+0200 I  STORAGE  [conn2] Finished shutting down journal flusher thread
+2020-05-09T11:47:08.980+0200 I  STORAGE  [conn2] Shutting down checkpoint thread
+2020-05-09T11:47:08.980+0200 D1 STORAGE  [WTCheckpointThread] stopping WTCheckpointThread thread
+2020-05-09T11:47:08.980+0200 I  STORAGE  [conn2] Finished shutting down checkpoint thread
+2020-05-09T11:47:09.019+0200 I  STORAGE  [conn2] shutdown: removing fs lock...
+2020-05-09T11:47:09.019+0200 I  CONTROL  [conn2] now exiting
+2020-05-09T11:47:09.019+0200 I  CONTROL  [conn2] shutting down with code:0

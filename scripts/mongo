@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# IMPORTANT: mac os users, you need to install coreutils to get access to greadlink (which is a replacement for readlink)
+# Install by running this in you terminal: brew install coreutils
+if [[ $OSTYPE == darwin* ]]; then
+    DIR="$(dirname $(greadlink -f $0))"
+else
+    DIR="$(dirname $(readlink -f $0))"
+fi
+
+HOST="$1"
+PORT="$2"
+URL="$HOST:$PORT"
+PROJECT="$DIR/.."
+DB_DIR="$PROJECT/db"
+
+echo "> Checking mongo server status $URL $DB_DIR"
+
+mongo "$URL" --eval "db.stats()" > /dev/null 2>&1
+result=$?
+
+echo "> mongo status: $result"
+
+if [[ $result -eq 0 ]]; then
+    echo "✓ Mongo is running"
+    exit 0
+else
+    echo "✗ Mongo is not running"
+fi
+
+echo "> Starting mongo"
+
+
+mkdir -p "$DB_DIR"
+
+if [ ! -f $DB_DIR/_replica_configured_ ]; then
+    # configure replica
+    mongo "$URL" --eval 'rs.initiate()'
+
+    touch $DB_DIR/_replica_configured_
+    echo "✓ Replica is now configured"
+fi
+
+mongod --bind_ip "$HOST" --port $PORT --replSet "rs0" --oplogSize 8 --noauth --dbpath "$DB_DIR" --fork --logpath="$DB_DIR/db.log" -v
+
+mongo "$HOST:$PORT"/admin --eval 'rs.initiate({_id: "rs0", members: [{_id: 0, host: "$HOST:$PORT" }]})' > /dev/null 2>&1
+
+echo "✓ Replica is initialized"
+
+echo "✓ Mongo is running"

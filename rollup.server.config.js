@@ -55,5 +55,6 @@ export default {
 
   watch: {
     clearScreen: false,
+    include: ["src/server/**", "src/static/**"]
   }
 };
