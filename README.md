@@ -1,6 +1,6 @@
 # Rome
 
-This is a game about politics, intreague, wealth building and power.
+This is a game about politics, intrigue, wealth building and power.
 
 ## Installation
 
