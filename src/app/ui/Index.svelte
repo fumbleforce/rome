@@ -10,7 +10,7 @@
 	}
 
 	h1 {
-		margin: 14px 0;
+		margin: 1rem 0;
 	}
 
 	figure {
@@ -22,8 +22,10 @@
 		@apply mx-auto;
 	}
 
-	p {
-		margin: 1em auto;
+	cite {
+		margin: 1rem 0;
+		text-align: center;
+		display: block;
 	}
 
 	@media (min-width: 480px) {
@@ -39,9 +41,11 @@
 	</figure>
 
 	<h1>Dignitas</h1>
-	<p>
-		This is a game about politics, intreague, wealth building and power.
-	</p>
+
+	<cite>
+		"If you must break the law, do it to seize power: in all other cases observe it."<br>
+		- Julius Caesar
+	</cite>
 
 	<p>
 		<Login />

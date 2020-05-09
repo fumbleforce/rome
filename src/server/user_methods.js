@@ -12,18 +12,24 @@ import {
   removeSession,
 } from "./session_api";
 
+function setSocketUser (socket, user, sessionId) {
+  socket.userId = user._id;
+  socket.sessionId = sessionId;
+
+  // The client now receives all updates to this user
+  User.sub(socket, "user", user._id, user);
+
+  socket
+    .set("userId", user._id)
+    .set("sessionId", sessionId);
+}
 
 Hidden.methods({
   async "user.login" (socket, creds) {
     const user = await loginUser(creds);
     const sessionId = await createSession(user._id);
 
-    socket.userId = user._id;
-    socket.sessionId = sessionId;
-
-    socket
-      .sub("user", user._id)
-      .set("user", user);
+    setSocketUser(socket, user, sessionId);
 
     return { user, sessionId };
   },
@@ -37,8 +43,6 @@ Hidden.methods({
 
     const { userId } = session;
     const latestSessionId = await getLatestSession(userId);
-
-    console.log({sessionId, session, userId, latestSessionId});
 
     if (sessionId !== latestSessionId) {
       removeLatestSession(userId);
@@ -54,22 +58,14 @@ Hidden.methods({
 
       throw new Hidden.Error("Invalid user");
     }
-    
-    console.log("Resume", user, userId, session, sessionId);
 
-    socket
-      .sub("user", user._id)
-      .set("user", user, true)
-      .set("userId", user._id, true)
-      .set("sessionId", sessionId, true);
+    setSocketUser(socket, user, sessionId);
 
     if (user.gameId) {
       try {
         const game = await Game.findOne(user.gameId);
 
-        socket
-          .sub("game", game._id)
-          .set("game", game);
+        Game.sub(socket, "game", game._id, game);
       } catch (e) {
         console.error(e);
         await User.updateOne(user._id, { $unset: { gameId: 1 } });
@@ -83,10 +79,7 @@ Hidden.methods({
     const user = await createUser(creds);
     const sessionId = await createSession(user._id);
 
-    socket
-      .set("user", user, true)
-      .set("userId", user._id, true)
-      .set("sessionId", sessionId, true);
+    setSocketUser(socket, user, sessionId);
 
     return { user, sessionId };
   },

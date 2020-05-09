@@ -1,6 +1,13 @@
 import Hidden from "hidden_server";
+import util from "util";
+import bcrypt from "bcrypt";
 import { User } from "./collections";
-import { hash, hashCompare } from "./password_utils";
+
+const saltRounds = 10;
+
+export const hash = password => util.promisify(bcrypt.hash)(password, saltRounds);
+export const hashCompare = util.promisify(bcrypt.compare);
+
 
 export const createUser = async (creds) => {
   const { password, email } = creds;

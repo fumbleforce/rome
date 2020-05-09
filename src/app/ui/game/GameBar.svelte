@@ -1,6 +1,6 @@
 <script>
   import { leaveGame } from "../../games";
-  import { game, gamePage } from "../../stores";
+  import { game } from "../../stores";
   import BarButton from "./BarButton.svelte";
 
   async function onLeaveGame () {
